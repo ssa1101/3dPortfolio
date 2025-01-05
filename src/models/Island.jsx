@@ -96,7 +96,8 @@ const Island = ({isRotating, setIsRotating, setCurrentStage, ...props}) => {
        */
       const normalizedRotation =
       ((rotation % (2 * Math.PI)) + 2 * Math.PI) % (2 * Math.PI);
-      console.log(normalizedRotation);
+ 
+      // console.log(normalizedRotation)
     //   console.log(normalizedRotation);
     // Set the current stage based on the island's orientation
     // console.log(normalizedRotation);
@@ -127,6 +128,8 @@ const Island = ({isRotating, setIsRotating, setCurrentStage, ...props}) => {
         break;
       case normalizedRotation <= 0.8 && normalizedRotation >=0.38:
         setCurrentStage(1);
+      case normalizedRotation <= 3 && normalizedRotation >=0.8:
+          setCurrentStage(3);
         break;
       default:
         setCurrentStage(null);
@@ -139,6 +142,7 @@ const Island = ({isRotating, setIsRotating, setCurrentStage, ...props}) => {
     canvas.addEventListener('pointerup', handlePointerUp);
     canvas.addEventListener('pointermove', handlePointerMove);
     document.addEventListener('keydown', handleKeyDown);
+ 
     document.addEventListener('keyup', handleKeyUp);
 
     return () =>{

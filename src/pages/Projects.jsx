@@ -5,7 +5,7 @@ import CTA from '../components/CTA';
 import {projects } from '../constants';
 const Projects = () => {
   return (
-    <section className='max-container'>
+    <section className='max-container' style={{minHeight:'100vh'}} >
     <h1 className='head-text'>
      My <span className="blue-gradient_text font-semibold drop-shadow">Projects</span>
     </h1>
@@ -18,11 +18,7 @@ const Projects = () => {
         <div className='block-container w-12 h-12'>
           <div className={`btn-back rounded-xl ${project.theme}`}/>
           <div className='btn-front rounded-xl flex justify-center items-center'>
-            <img 
-            src={project.Url}
-            alt="Project Icon"
-            className='w-1/2 h-1/2 object-contain'
-            /> 
+            
 
           </div>
         </div>
@@ -39,7 +35,7 @@ const Projects = () => {
             rel="noopener noreferrer"
             className='font-semibold text-blue-600'
             >
-              Live Link
+            Link to Project
               <img 
               src={arrow}
               alt="arrow"
@@ -52,6 +48,23 @@ const Projects = () => {
         </div>
     ))}
     </div>
+  
+      
+    <div >
+    <h1 className='head-text'>
+     My <span className="blue-gradient_text font-semibold drop-shadow">Github</span>
+    </h1>
+    <br></br>
+   <Link to="https://github.com/ssa1101" className='font-semibold text-blue-600'>  
+          Link to Github
+            <img 
+              src={arrow}
+              alt="arrow"
+              className='w-4 h-4 object-contain'
+              /></Link>
+      
+    </div>
+    <br></br>
     <hr className='border-slate-200'/>
     <CTA />
     </section>

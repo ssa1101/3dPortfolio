@@ -3,6 +3,8 @@ import emailjs from '@emailjs/browser';
 import Dog from '../models/Dog';
 import Loader from '../components/Loader';
 import { Canvas } from '@react-three/fiber';
+import { Link } from 'react-router-dom';
+import { arrow } from '../assets/icons';
 const Contact = () => {
     const formRef = useRef();
     const [form, setForm] = useState({name: "", email:'', message:''});
@@ -24,17 +26,17 @@ const Contact = () => {
             to_email: 'shifasadaat@gmail.com',
             message: form.message
         }, import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY).then(()=>{
-           
+            setIsLoading(false);
             setForm({name: "", email:'', message:''})
         }).catch((error)=>{
-            setIsLoading(false);
+          
             setcurrentAnimation('idle');
             console.log(error);
         });
     };
     
   return (
-   <section className="relative flex lg:flex-row flex-col max-container">
+   <section className="relative flex lg:flex-row flex-col max-container" style={{minHeight:'100vh'}}>
 
     <div className="flex-1 min-w-[50%] flex flex-col">
         <h1 className="head-text">Get In Touch</h1>
@@ -61,14 +63,36 @@ const Contact = () => {
                  <directionalLight intensity={2.5} position={[0,0,1]} />
                  <ambientLight intensity={0.5} />
                 <Suspense fallback={<Loader />}>
-                    {/* <Dog 
-                    currentAnimation={currentAnimation}
-                    position={[2.5, -2.1, 0.1]} 
-                    rotation={[12.86, 0.45, 0.2]} 
-                    scale={[1.4,1.4,1.4]}/> */}
+                 
                 </Suspense>
             </Canvas>
         </div>
+       
+        <h1 className='head-text'>
+        My <span className="blue-gradient_text font-semibold drop-shadow">Linkedin</span>
+        </h1>
+        <Link to="https://www.linkedin.com/in/shifa-sadaat/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className='subhead-text font-semibold text-blue-600'
+            font-
+            >
+            <br></br>
+         <img 
+              src={arrow}
+              alt="arrow"
+              className='w-6 h-6 object-contain'
+              />
+             https://www.linkedin.com/in/shifa-sadaat/
+            </Link>
+            <br></br>
+            <br></br>
+        <h1 className='head-text'>
+        My <span className="blue-gradient_text font-semibold drop-shadow">Email</span>
+        </h1>
+        <br></br>
+
+        <h3 className='subhead-text'> shifasadaat@gmail.com</h3>
     </div>
    </section>
   )

@@ -1,9 +1,9 @@
 import { meta, shopify, starbucks, tesla } from "../assets/images";
 import {
-    car,
+   
     contact,
     css,
-    estate,
+   
     express,
     git,
     github,
@@ -11,7 +11,7 @@ import {
     javascript,
     linkedin,
     mongodb,
-    motion,
+   
     mui,
     nextjs,
     nodejs,
@@ -165,17 +165,33 @@ export const socialLinks = [
 export const projects = [
     {
         iconUrl: pricewise,
-        theme: 'btn-back-red',
-        name: 'Amazon Price Tracker',
-        description: "",
-        link: "",
+        theme: 'btn-back-green',
+        name: 'Admin Dashboard - Machine Learning',
+        description: 'Admin Dashboard visualizes key metrics using recharts and regression.js libraries. Machine learning model predicts revenue via a simple linear regression. Technology: MERN Stack',
+        link: "https://shifa-sadaat-admin-mydash.netlify.app",
     },
     {
         iconUrl: threads,
         theme: 'btn-back-green',
-        name: 'Full Stack Threads Clone',
-        description: '',
-        link: "",
+        name: 'Dynamic Forms App',
+        description: 'Full stack dynamic forms application, enabling CRUD functionality using RESTful custom API architecture. Live site allows secure user authentication, creation and distribution of forms. MERN Stack.  Test Account Credentials - Username: shifasadaat@gmail.com Password: 1234',
+        link: "https://shifa-sadaat-dynamic-forms.netlify.app/auth",
     },
+    {
+        iconUrl: threads,
+        theme: 'btn-back-green',
+        name: '3D Portfolio Site',
+        description: 'This portfolio website is designed with React and Three.js. The Home Page gamified mechanics utilize simple Three.js geometry.',
+        link: "https://github.com/ssa1101/3dPortfolio",
+    },
+    {
+        iconUrl: threads,
+        theme: 'btn-back-green',
+        name: 'E-Commerce Site',
+        description: 'This CMS website utilizes Payload CMS and features tech and cosmetic related products. Integrated Stripe checkout ',
+        link: "https://github.com/ssa1101/e-commerce",
+    },
+
+
 
 ];
